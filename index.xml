@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>yzs-code.github.io/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Dec 2019 16:31:52 +0800</lastBuildDate>
+    
+	<atom:link href="yzs-code.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hello world</title>
+      <link>yzs-code.github.io/post/blog/</link>
+      <pubDate>Mon, 02 Dec 2019 16:31:52 +0800</pubDate>
+      
+      <guid>yzs-code.github.io/post/blog/</guid>
+      <description>！图片 云想衣裳花想容，远近高低各不同，不识庐山真面目，只识弯弓射大雕</description>
+    </item>
+    
+  </channel>
+</rss>
