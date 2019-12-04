@@ -12,13 +12,31 @@
             var layer = layui.layer
                 ,form = layui.form;
 
-            layer.msg('Hello World');
+            layer.confirm('您好啊王同学，想我了嘛', {
+                btn: ['没有呀~','恩恩，超级想！'] //按钮
+            }, function(){
+                layer.msg('嘿嘿嘿 mua！', {icon: 1});
+            }, function(){
+                layer.confirm('你好好想想 盯~', {
+                    btn: ['想！','想！'] //按钮
+                }, function(){
+                    layer.msg('哼唧 ！', {icon: 1});
+                },function(){
+                    layer.msg('叉腰 ！', {icon: 1});
+                }
+
+
+
+
+            });
         });
     </script>
 </head>
 <body>
-    <div>
-
+    <div onclick="function f() {
+      
+    }">
+        
         <i class="layui-icon layui-icon-face-smile" style="font-size: 30px; color: #1E9FFF;"></i>
     </div>
 
