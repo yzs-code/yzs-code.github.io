@@ -3,53 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>小蓝和他的朋友们</title>
-    <script   src="https://code.jquery.com/jquery-3.3.1.min.js"
-              integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-              crossorigin="anonymous"></script>
-    <LINK  REL="stylesheet" href="libs/layui/css/layui.css" >
-    <script src="libs/layui/layui.js">
-    </script>
-    <script>
-        //一般直接写在一个js文件中
-        layui.use(['layer', 'form'], function(){
-            var layer = layui.layer
-                ,form = layui.form;
-
-            layer.confirm('欢迎来到这里',{
-                btn: ['离开','这里是什么地方啊'] //按钮
-            }, function(){
-                layer.msg('??????', {icon: 2});
-                $("body").css({"background-image":"url(img/shichong.jpg)"});
-                setTimeout(function(){
-                    $("body").css({"background-image":"url(img/qiapi.jpg)"});
-                    layer.msg('恰屁吧你！', {icon: 3});
-                },3000);
-                $("body").css({"background-image":"url( img/chidiansha.jpg)"});
-                layer.msg('来来来 吃点东西！', {icon: 3});
-
-
-            }, function(){
-                layer.msg('这是我学习的地方呀！', {icon: 3});
-                $("body").css({"background-image":"url(img/fangsi.jpg"});
-
-
-                setTimeout(function(){
-                    $("body").css({"background-image":"url(img/秃头.jpg)"});
-                    layer.msg('我变秃了也变强了', {icon: 1});
-                },3000);
-                setTimeout(function(){
-                    $("body").css({"background-image":"url( img/chaju.jpg)"});
-                    layer.msg('经过努力跟大佬的差距也就这么大！', {icon: 1});
-                },6000);
-
-
-            });
-
-
-
-
-
-        });
+    <script   src="\yzs-code.github.io\libs\jquery-1.10.2.min.js"></script>
+    <LINK  REL="stylesheet" href="\yzs-code.github.io\libs\layui\css\layui.css" >
+    <script src="\yzs-code.github.io\libs\layui\layui.js">
     </script>
     <style>
         #all{
@@ -62,20 +18,58 @@
             width: 100%;
             height: 100%;
         }
+        div{
+            margin: 0px auto;
+        }
         img{
-            width: 100%;
-            height: 100%;
-
+            position: absolute;
+            width: 30%;
+            height: 60%;
+            left: 35%;
+            top: 10%;
+        }
+        .title{
+            font-size:1.5rem;
+            font-family:Roboto, sans-serif;
+            font-weight:600;
+            margin:1rem auto
         }
     </style>
-
 
 </head>
 <body>
 <div id="all"  >
-    <img  src="img/xiaolanandfriends/1.png" style="position: absolute;top: 10%;">
+    <h1 class="title" ><a href="/post/xiaolan/tiaopi.html" title="阿三的奇妙冒险" style="color: blue">阿三的奇妙冒险</a></h1>
+
+    <img  src="\yzs-code.github.io\img\xiaolanandfriends\1.png">
+
+
+
 </div>
 
 
 </body>
+<script>
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form'], function(){
+        var layer = layui.layer
+            ,form = layui.form;
+        var i=1;
+        var url="/yzs-code.github.io/img/xiaolanandfriends/";
+
+
+       var int= setInterval(function(){
+            i++;
+            if(i>=16){
+                window.clearInterval(int);
+            }
+            $("img").attr({"src":url+i+".png"});
+
+        },3000);
+
+
+
+    });
+</script>
+
 </html>
