@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小蓝和他的朋友们</title>
+    <script   src="https://code.jquery.com/jquery-3.3.1.min.js"
+              integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+              crossorigin="anonymous"></script>
+    <LINK  REL="stylesheet" href="libs/layui/css/layui.css" >
+    <script src="libs/layui/layui.js">
+    </script>
+    <script>
+        //一般直接写在一个js文件中
+        layui.use(['layer', 'form'], function(){
+            var layer = layui.layer
+                ,form = layui.form;
+
+            layer.confirm('欢迎来到这里',{
+                btn: ['离开','这里是什么地方啊'] //按钮
+            }, function(){
+                layer.msg('??????', {icon: 2});
+                $("body").css({"background-image":"url(img/shichong.jpg)"});
+                setTimeout(function(){
+                    $("body").css({"background-image":"url(img/qiapi.jpg)"});
+                    layer.msg('恰屁吧你！', {icon: 3});
+                },3000);
+                $("body").css({"background-image":"url( img/chidiansha.jpg)"});
+                layer.msg('来来来 吃点东西！', {icon: 3});
+
+
+            }, function(){
+                layer.msg('这是我学习的地方呀！', {icon: 3});
+                $("body").css({"background-image":"url(img/fangsi.jpg"});
+
+
+                setTimeout(function(){
+                    $("body").css({"background-image":"url(img/秃头.jpg)"});
+                    layer.msg('我变秃了也变强了', {icon: 1});
+                },3000);
+                setTimeout(function(){
+                    $("body").css({"background-image":"url( img/chaju.jpg)"});
+                    layer.msg('经过努力跟大佬的差距也就这么大！', {icon: 1});
+                },6000);
+
+
+            });
+
+
+
+
+
+        });
+    </script>
+    <style>
+        #all{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background-repeat:no-repeat;
+            background-color: bisque;
+            width: 100%;
+            height: 100%;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+
+        }
+    </style>
+
+
+</head>
+<body>
+<div id="all"  >
+    <img  src="img/xiaolanandfriends/1.png" style="position: absolute;top: 10%;">
+</div>
+
+
+</body>
+</html>
